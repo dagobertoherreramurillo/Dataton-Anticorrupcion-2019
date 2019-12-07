@@ -45,4 +45,8 @@ RETURN *
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/Vecindario-de-la-empresa-fantasma.png)
 
+Ahora bien, si se deseara utilizar el grafo como punto de partida para la construcción de un modelo predictivo que determine si una empresa es Fantasma o no. El punto de partida es un grafo bipartito de contratos y licitantes como el que se muestra en la sección a) dde la siguiente figura. A partir de allí se obtiene una proyección donde las empresas que han participado juntas en algún contrato se unen por una relación inferida llamada CO_LICITA con una propiedad llamada contador que contiene el número de procesos en los que esas empresas han coincidido. A partir de ahí se genera un aproyección que solamente contiene nodos licitantes como se muestra en la sección b) de la misma figura.
+
+
+![Aquí la descripción de la imagen por si no carga](imagenes/grafo-bipartito.png)
 
