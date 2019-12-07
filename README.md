@@ -1,4 +1,4 @@
-# Datatón-Anticorrupción-2019
+# Explorando la actividad de las empresas fantasma en la red de compras públicas
 El "Datatón Anticorrupción" es un hackathon donde construimos herramientas informativas para la sociedad utilizando datos abiertos proporcionados por el Sistema Nacional Anticorrupción (SNA). 
 
 Objetivo específico: estudiar el comportamiento de empresas fantasma en la red de compras públicas.
