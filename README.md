@@ -66,4 +66,6 @@ RETURN *
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/graph.png)
 
+A la proyección obtenida se le pueden aplicar múltiples algoritmos, entre ellos aquellos que tienen que ver con la detección de comunidades. Entre ellos, la modularidad de Louvain ha ddemostrado ser una alternaiva eficaz para la detección de comunidades criminales. El siguiente código de Cypher aplica modularidad de Louvain a la proyección. El resultado son grupos dde licitantes que se encuentran ligados por su densidad de conexiones.
+
 
