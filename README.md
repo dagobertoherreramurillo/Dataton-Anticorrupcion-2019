@@ -45,8 +45,23 @@ RETURN *
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/Vecindario-de-la-empresa-fantasma.png)
 
-Ahora bien, si se deseara utilizar el grafo como punto de partida para la construcción de un modelo predictivo que determine si una empresa es Fantasma o no. El punto de partida es un grafo bipartito de contratos y licitantes como el que se muestra en la sección a) dde la siguiente figura. A partir de allí se obtiene una proyección donde las empresas que han participado juntas en algún contrato se unen por una relación inferida llamada CO_LICITA con una propiedad llamada contador que contiene el número de procesos en los que esas empresas han coincidido. A partir de ahí se genera un aproyección que solamente contiene nodos licitantes como se muestra en la sección b) de la misma figura.
+Ahora bien, si se deseara utilizar el grafo para ejecutar algoritmos de grafos (ejemplo: detección de comunidades) o para la construcción de un modelo predictivo que determine si una empresa es Fantasma o no. Un punto de partida conveniente es un grafo bipartito de contratos y licitantes como el que se muestra en la sección a) de la siguiente figura. De allí se obtiene una proyección donde las empresas que han participado juntas en algún contrato se unen por una relación inferida llamada CO_LICITA con una propiedad llamada contador que contiene el número de procesos en los que esas empresas han coincidido. A partir de ahí se genera una proyección que solamente contiene nodos licitantes como se muestra en la sección b) de la misma figura.
 
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/grafo-bipartito.png)
+
+
+El siguiente query de Cypher crea la nueva relación CO_LICITA con el contador de contratos directos y selectivos comunes a los licitantes del vecindario Q1. Y la imagen de la proyección de licitantes se muestra más abajo.
+
+```
+MATCH (a1:Q1)-[:LICITA]->(c:Contrato)<-[:LICITA]-(a2:Q1)
+WHERE (c.método='directo' OR c.método='selectivo') AND a1<>a2
+WITH a1, a2, count(c) AS contador
+MERGE (a1)-[colicita:CO_LICITA]-(a2)
+SET colicita.contador = contador
+RETURN *
+```
+
+![Aquí la descripción de la imagen por si no carga](imagenes/graph.png)
+
 
