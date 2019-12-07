@@ -7,7 +7,7 @@ El siguiente modelo muestra una propuesta de grafo que contiene los nodos, relac
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/Modelo_de_grafo_para_contrataciones_públicas.jpg)
 
-Con datos de la lista definitiva de empresas fantasma publicada por el SAT al 4 de diciembre del 2019 (www.sat.gob.mx/cifras_sat/Paginas/datos/vinculo.html?page=ListCompleta69B.html), se procedió a asignar una nueva etiqueta de tipo EmpresaFantasma a los 97 registros de licitantes coincidentes según su RFC. El siguiente código de Cypher muestra la creación de la nueva etiqueta.
+Con datos de la lista definitiva de empresas fantasma publicada por el SAT al 4 de diciembre del 2019 (www.sat.gob.mx/cifras_sat/Paginas/datos/vinculo.html?page=ListCompleta69B.html), se procedió a asignar una nueva etiqueta de tipo EmpresaFantasma a los 97 registros de licitantes coincidentes según su RFC. La consulta de Cypher muestra la creación de la nueva etiqueta.
 
 ```
 MATCH (c:Licitante)
