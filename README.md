@@ -35,7 +35,7 @@ SET c:EmpresaFantasma
 RETURN *
 ```
 
-Posteriormente, se procedió a explorar el vecindario de las empresas fantasma en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos dde contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
+Posteriormente, se procedió a explorar el vecindario de las empresas fantasma en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos de contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
 El query de Cypher que permite visualizar ese vecindario se muestra a continuación. Adicionalmente todas las empresas dentro de ese vecindario se asignaron a una nueva etiqueta llamada Vecindario para facilitar las consultas posteriores.
 
 ```
@@ -47,7 +47,7 @@ RETURN *
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/Vecindario-de-la-empresa-fantasma.png)
 
-Ahora bien, si se deseara utilizar el grafo para ejecutar algoritmos de grafos (ejemplo: detección de comunidades) o para la construcción de un modelo predictivo que determine si una empresa es Fantasma o no. Un punto de partida conveniente es un grafo bipartito de contratos y licitantes como el que se muestra en la sección a) de la siguiente figura. De allí se obtiene una proyección donde las empresas que han participado juntas en algún contrato se unen por una relación inferida llamada CO_LICITA con una propiedad llamada contador que contiene el número de procesos en los que esas empresas han coincidido. A partir de ahí se genera una proyección que solamente contiene nodos licitantes como se muestra en la sección b) de la misma figura.
+Ahora bien, si se deseara utilizar el grafo para ejecutar algoritmos de grafos (ejemplo: detección de comunidades) o para la construcción de un modelo predictivo que determine si una empresa es Fantasma o no. Un punto de partida conveniente es un grafo bipartito de contratos y licitantes como el que se muestra en la sección a) de la siguiente figura. De allí se obtiene una proyección donde las empresas que han participado juntas en algún contrato se unen a través de una relación inferida CO_LICITA con una propiedad llamada contador que contiene el número de procesos en los que esas empresas han coincidido. A partir de ahí se genera una proyección que solamente contiene nodos licitantes como se observa en la sección b) de la misma figura.
 
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/grafo-bipartito.png)
