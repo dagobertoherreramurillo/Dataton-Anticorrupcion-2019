@@ -78,3 +78,5 @@ RETURN algo.getNodeById(nodeId).name AS tenderer,
 communities
 ORDER BY communities
 ```
+
+![Aquí la descripción de la imagen por si no carga](imagenes/comunidad.png)
