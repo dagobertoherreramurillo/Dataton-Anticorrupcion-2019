@@ -46,5 +46,3 @@ RETURN *
 ![Aquí la descripción de la imagen por si no carga](imagenes/Vecindario de la empresa fantasma.png)
 
 
-
-
