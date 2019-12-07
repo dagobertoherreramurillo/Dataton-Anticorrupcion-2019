@@ -43,6 +43,7 @@ SET a1:Q1, a2:Q1
 RETURN *
 ```
 
+![Aquí la descripción de la imagen por si no carga](imagenes/Vecindario de la empresa fantasma.png)
 
 
 
