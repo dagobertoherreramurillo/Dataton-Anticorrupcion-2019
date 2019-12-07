@@ -1,6 +1,8 @@
 # Datatón-Anticorrupción-2019
 El "Datatón Anticorrupción" es un hackathon donde construimos herramientas informativas para la sociedad utilizando datos abiertos proporcionados por el Sistema Nacional Anticorrupción (SNA). 
 
+Objetivo específico: estudiar el comportamiento de empresas fantasma en la red de compras públicas.
+
 El siguiente modelo muestra una propuesta de grafo que contiene los nodos, relaciones y propiedades necesarios para explorar datos de contrataciones públicas abiertas.
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/Modelo_de_grafo_para_contrataciones_públicas.jpg)
