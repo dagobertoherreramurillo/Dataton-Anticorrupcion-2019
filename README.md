@@ -33,3 +33,5 @@ SET c:EmpresaFantasma
 RETURN *
 ```
 
+Posteriormente, se procedió a explorar el vecindario de las empresas fantasma en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos dde contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
+
