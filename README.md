@@ -35,7 +35,7 @@ SET c:EmpresaFantasma
 RETURN *
 ```
 
-Posteriormente, se procedió a explorar el vecindario de las empresas fantasma en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos de contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
+Posteriormente, se procedió a explorar el vecindario de las empresas fantasma (en rojo) en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos de contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
 El query de Cypher que permite visualizar ese vecindario se muestra a continuación. Adicionalmente todas las empresas dentro de ese vecindario se asignaron a una nueva etiqueta llamada Vecindario para facilitar las consultas posteriores.
 
 ```
@@ -82,4 +82,10 @@ ORDER BY communities
 ![Aquí la descripción de la imagen por si no carga](imagenes/comunidad.png)
 
 
-Finalmente, los grafos son una gran fuente para la implementación de modelos de predicción. Uno de los grandes desafíos es cómo extraer caracterísicas de los grafos para el entrenamiento de los modelos. 
+Finalmente, los grafos son una gran fuente para la implementación de modelos de predicción. Uno de los grandes desafíos es cómo extraer caracterísicas de los grafos para el entrenamiento de los modelos, esto se logra a través de los "embeddings". Estas són representaciones vectoriales de la topología, conectividad o estructura de la red que sirven como insumos para modelos de aprendizaje automático en forma de atributos. DeepWalk es una forma de embedding que representa los vértices del grafo. El siguiente query crea los embeddings para la proyección de licitantes de Q1.
+
+
+CALL embedding.deepgl("Q1","CO_LICITA", {
+nodeFeatures: ['contador'],
+iterations: 2
+})
