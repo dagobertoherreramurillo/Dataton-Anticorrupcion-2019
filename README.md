@@ -34,12 +34,12 @@ RETURN *
 ```
 
 Posteriormente, se procedió a explorar el vecindario de las empresas fantasma en todos los contratos en los cuales estos licitantes fueron invitados a procesos de contratación directos o selectivos. El vecindario incluye tanto los procesos dde contratación en cuestión como los otros licitantes no necesariamente catalogados como empresas fantasmas que también fueron invitados a esos procesos.
-El query de Cypher que permite visualizar ese vecindario se muestra a continuación. Adicionalmente todas las empresas dentro de ese vecindario se 
+El query de Cypher que permite visualizar ese vecindario se muestra a continuación. Adicionalmente todas las empresas dentro de ese vecindario se asignaron a una nueva etiqueta llamada Vecindario para facilitar las consultas posteriores.
 
 ```
 MATCH (a1:EmpresaFantasma)-[:LICITA]->(c:Contrato)<-[:LICITA]-(a2:LICITANTE)
 WHERE c.método='directo' OR c.método='selectivo'
-SET a1:Q1, a2:Q1
+SET a1:Vecindario, a2:Vecindario
 RETURN *
 ```
 
