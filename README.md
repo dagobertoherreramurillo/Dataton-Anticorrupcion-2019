@@ -80,3 +80,6 @@ ORDER BY communities
 ```
 
 ![Aquí la descripción de la imagen por si no carga](imagenes/comunidad.png)
+
+
+Finalmente, los grafos son una gran fuente para la implementación de modelos de predicción. Uno de los grandes desafíos es cómo extraer caracterísicas de los grafos para el entrenamiento de los modelos. 
